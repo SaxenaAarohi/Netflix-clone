@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    body {
+      @apply bg-black text-white; /* Set background to black and text to white */
+    }
+  }
+  html,body{
+   margin: 0;
+   padding: 0;
+   
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
