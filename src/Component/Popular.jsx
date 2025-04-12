@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Display from './Display';
 import { useState } from 'react';
 
-const Popular = () => {
+const Popular = ({url}) => {
     const [array, setArray] = useState([]);
     async function getpopular(){
         const options = {
@@ -13,7 +13,7 @@ const Popular = () => {
             }
           };
           try {
-            const res = await fetch('https://api.themoviedb.org/3/tv/popular?language=en-US&page=1', options);
+            const res = await fetch(url, options);
             const data = await res.json();
             setArray(data.results); 
           } catch (err) {
