@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import bg from '../assets/bg.jpg';
 import Footer from './Footer';
 import { useNavigate, useParams } from 'react-router-dom';
-import logo from '../assets/Netflix-logo.png';
+import logo from '../assets/Netflix-Logo.png';
 const Modalsignin = () => {
     const {type}=useParams();
     const [inpval, setInput] = useState("");
