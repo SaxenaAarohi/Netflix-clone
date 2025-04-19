@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import search from '../assets/search.png';
-import logo from '../assets/Netflix-logo.png';
+import logo from '../assets/Netflix-Logo.png';
 
 import { useNavigate } from 'react-router-dom';
 const Navbar = ({color}) => {
