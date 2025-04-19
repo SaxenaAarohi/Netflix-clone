@@ -9,7 +9,7 @@ export default function Footer() {
         <FaTwitter className="hover:text-white cursor-pointer transition duration-300" />
         <FaYoutube className="hover:text-white cursor-pointer transition duration-300" />
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-2xl md:text-4xl text-center md:text-left">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-xl md:text-4xl text-center md:text-left">
         <div className="space-y-5">
           <p>Audio Description</p>
           <p>Investor Relations</p>
