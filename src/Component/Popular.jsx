@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Display from './Display';
 import { useState } from 'react';
 
-const Popular = ({url}) => {
+const Popular = ({url ,type}) => {
     const [array, setArray] = useState([]);
     async function getpopular(){
         const options = {
@@ -26,7 +26,7 @@ const Popular = ({url}) => {
  
   return (
     <div>
-      <Display newarray={array}/>
+      <Display newarray={array} type={type} />
     </div>
   )
 }

@@ -1,47 +1,86 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
 import Popular from './Popular'
 import Footer from './Footer'
-import iron from '../assets/ironman.webp';
+import Details from './Details'
+import iron from '../assets/spider.webp';
+import name from '../assets/logospider.png';
 
 const Home = () => {
+  const [type,setType]=useState("movie");
+    const [isclick,setClick]=useState(false);
+    function closemodal() {
+      setClick(false);
+    }
   return (
     <>
-    <div className="relative m-0 p-0 h-screen bg-no-repeat bg-cover "style={{ backgroundImage: `url(${iron})` }}>
-    <Navbar/>
-    </div>
-    <div className='text-white bg-black'>
-    <div >
-    <button className='absolute bg-white h-[70px] w-[190px] ml-[700px]   text-black text-3xl  flex' >
-       <img className='h-[40px] w-[40px] p-[10px] mt-[15px] ml-[20px]' src='https://icons.veryicon.com/png/o/miscellaneous/winsion/play-button-6.png'/> 
-       <p className='mt-[15px] ml-[10px] text-center'>Play</p>
-    </button>
-    <button className='absolute bg-gray-400/30 h-[70px]  ml-[900px] w-[190px] '>
-   <p className='text-white text-3xl'>More info</p>
-    </button>
-    </div>
-     <div >
-      <p className='text-5xl p-10 font-bold mb-10'>Popular on Netflix</p>
-      <Popular url={'https://api.themoviedb.org/3/tv/popular?language=en-US&page=1'}/>
-     </div>
-     <div>
-      <p className='text-5xl p-10 mb-10 font-bold'>Blockbuster Movies</p>
-       <Popular url={'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1'}/>
-     </div>
-     <div>
-      <p className='text-5xl p-10 font-bold mb-10'>Currentely in Threaters</p>
-      <Popular url={'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1'}/>
-     </div>
-     <div>
-      <p className='text-5xl p-10 font-bold mb-10'>Upcoming</p>
-      <Popular url={'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1'}/>
-     </div>
-    </div>
-   
-     <Footer/>
-    
-    </>
-  )
-}
+      <div
+        className="relative w-full h-[26vh] md:h-[105vh] bg-no-repeat bg-contain md:bg-cover"
+        style={{ backgroundImage: `url(${iron})` }}
+      >
+        <Navbar color={"black"}/>
+        <div className="absolute top-1/2 ml-[20px] md:ml-[200px] text-white">
+          <img src={name} className="h-[40px] w-[100px] md:h-[300px] md:w-[600px] mb-2" />
+          <p className="text-sm md:text-4xl md:w-full line-clamp-1 w-[80%] text-white md:line-clamp-none">
+          Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental<br/> monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow <br/> hero with mysterious origins.
+          </p>
+        </div>
+        <div className="absolute ml-[20px] md:ml-[200px] -bottom-1 md:bottom-56 flex flex-wrap gap-6">
+          <button
+          onClick={()=>setClick(true)}
+            className="bg-white h-[30px] w-[80px] md:h-[70px] md:w-[190px] text-black text-7 md:text-3xl flex items-center justify-center shadow-md rounded-lg"
+          >
+            <img
+              className="h-[10px] w-[10px] mr-3"
+              src="https://icons.veryicon.com/png/o/miscellaneous/winsion/play-button-6.png"
+              alt="Play"
+            />
+            <p>Play</p>
+          </button>
 
-export default Home
+          <button className="bg-gray-600/30 h-[30px] w-[80px] md:h-[70px] md:w-[190px] text-white text-7 md:text-3xl flex items-center justify-center shadow-md rounded-lg">
+            <p>More info</p>
+          </button>
+        </div>
+         {isclick && <Details  id={ 429617} closemodal={closemodal} />} 
+      </div>
+
+      <div className='text-white bg-black'>
+        <div>
+          <p className='text-2xl px-3 pt-8 pb-3 md:p-10 md:text-5xl font-bold mb-3 md:mb-10'>Popular on Netflix</p>
+          <Popular
+            url={'https://api.themoviedb.org/3/tv/popular?language=en-US&page=1'} type={type}
+            // setClick={setClick}
+            // closemodal={closemodal}
+            // isclick={isclick}
+          />
+        </div>
+
+        <div>
+          <p className='text-2xl p-3 md:p-10 md:text-5xl font-bold mb-3 md:mb-10'>Blockbuster Movies</p>
+          <Popular
+            url={'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1'} type={type}
+          />
+        </div>
+
+        <div>
+          <p className='text-2xl p-3 md:p-10 md:text-5xl font-bold mb-3 md:mb-10'>Currently in Theaters</p>
+          <Popular
+            url={'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1'} type={type}
+          />
+        </div>
+
+        <div>
+          <p className='text-2xl p-3 md:p-10 md:text-5xl font-bold mb-3 md:mb-10'>Upcoming</p>
+          <Popular
+            url={'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1'} type={type}
+          />
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
