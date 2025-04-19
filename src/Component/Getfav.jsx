@@ -24,7 +24,7 @@ getfav();
   return (
     <div className='bg-black h-screen'>
       <Navbar color={"white"}/>
-      <p className='text-white text-4xl md:text-5xl p-12 font-bold md:mb-10'>Yours Favourite</p>
+      <p className='text-white text-3xl md:text-5xl text-center p-12 font-bold md:mb-10'>Yours Favourite</p>
       <Griddisplay newarray={array}/>
     </div>
   )

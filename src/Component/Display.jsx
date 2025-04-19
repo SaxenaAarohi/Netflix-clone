@@ -16,7 +16,7 @@ const Display = ({ newarray,type }) => {
   return (
     <div className='w-full text-white'>
       <div className="overflow-x-auto hide-scrollbar">
-        <div className='flex space-x-3 md:space-x-7 md:mb-[50px] mb-[20px]'>
+        <div className='flex gap-3 md:space-x-7 md:mb-[50px] mb-[20px]'>
           {arr && arr.length > 0 ? (
             arr.map((ele) => (
               <div

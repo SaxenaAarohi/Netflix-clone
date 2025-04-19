@@ -31,12 +31,12 @@ useEffect(()=>{
   return (
     <div className='bg-black h-screen'>
         <Navbar color={"white"}/>
-        <div className='flex justify-center items-center h-[40%]'>
+        <div className='flex justify-center items-center h-[30%]'>
         <input type='text' placeholder='Search' onKeyDown={(e)=>{
           if(e.key=='Enter')
             search();
-        }} className='text-4xl p-9 md:h-[90px] h-[32px] w-[300px] md:w-[800px]  ' onChange={(e)=>{setInp(e.target.value)}}/>
-        <FaSearch  className='bg-red-600 md:h-[90px] w-[43px] h-[74px] md:w-[100px]' onClick={search}/>
+        }} className='text-2xl p-3 md:h-[90px] h-[51px] w-[300px] md:w-[800px]  ' onChange={(e)=>{setInp(e.target.value)}}/>
+        <FaSearch  className='bg-red-600 md:h-[90px] w-[50px] h-[51px] md:w-[100px]' onClick={search}/>
         </div>
         <Griddisplay newarray={array}/>
     </div>

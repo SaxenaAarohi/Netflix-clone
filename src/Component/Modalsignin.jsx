@@ -33,14 +33,14 @@ const Modalsignin = () => {
 
                 <div className='h-[100%] w-full  flex justify-center'>
                     <div className='bg-black text-white bg-opacity-70 w-[80%] mt-20 md:w-[30%]'>
-                      <div className="lg:py-28 lg:px-20 py-16 px-8">
-                            <p className='font-bold  text-5xl md:text-7xl mb-10 md:mb-20' >{type=="signin"?"Sign in":"Sign up"} </p>
+                      <div className="lg:py-28 lg:px-20 py-12 px-8">
+                            <p className='font-bold  text-4xl md:text-7xl mb-10 md:mb-20' >{type=="signin"?"Sign in":"Sign up"} </p>
                             {type=="signup"&&(
-                                <input type='text' placeholder='Username' className='placeholder:text-3xl md:text-4xl md:placeholder:text-4xl text-white p-4 md:p-8 text-3xl w-[100%] mb-10 bg-black/30 border border-gray-400 '/>
+                                <input type='text' placeholder='Username' className='placeholder:text-2xl md:text-4xl md:placeholder:text-4xl text-white p-4 md:p-8 text-2xl w-[100%] mb-10 bg-black/30 border border-gray-400 '/>
                             )}
-                            <input type='email' placeholder='Email address' className='placeholder:text-3xl md:text-4xl md:placeholder:text-4xl md:p-8 text-white  p-4 text-3xl w-[100%]  bg-black/30 border border-gray-400  ' onChange={(e) => { setInput(e.target.value) }}/>
-                            <input type='Password' placeholder='Password' className='placeholder:text-3xl text-white p-4 text-3xl md:text-4xl md:p-8 md:placeholder:text-4xl w-[100%] mt-10 bg-black/30 border border-gray-400 '/>
-                            <button className='rounded-md bg-red-600 text-white mt-10 md:h-28 md:text-[39px] w-[100%] text-[30px] font-bold p-4' onClick={gotohome}>{type=="signin"?"Sign in":"Sign up"}</button>
+                            <input type='email' placeholder='Email address' className='placeholder:text-2xl md:text-4xl md:placeholder:text-4xl md:p-8 text-white  p-4 text-2xl w-[100%]  bg-black/30 border border-gray-400  ' onChange={(e) => { setInput(e.target.value) }}/>
+                            <input type='Password' placeholder='Password' className='placeholder:text-2xl text-white p-4 text-2xl md:text-4xl md:p-8 md:placeholder:text-4xl w-[100%] mt-10 bg-black/30 border border-gray-400 '/>
+                            <button className='rounded-md bg-red-600 text-white mt-10 md:h-28 md:text-[39px] w-[100%] text-2xl font-bold p-4' onClick={gotohome}>{type=="signin"?"Sign in":"Sign up"}</button>
                             {type=="signin"&&(
                                 <div>
                                    <p className='text-2xl md:text-4xl mt-6 md:mt-10'>New to Netflix?</p>
