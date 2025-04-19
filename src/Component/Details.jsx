@@ -64,7 +64,7 @@ const Details = ({ id , closemodal }) => {
               <h1 className='line-clamp-1 md:line-clamp-none text-2xl md:text-4xl font-bold pt-2 md:pt-8'>
                 {apidata.name}
               </h1>
-              <button className="md:px-8 px-4 py-0 md:py-7  bg-red-600 hover:bg-red-700 rounded-lg text-white text-sm md:text-3xl md:mt-8" onClick={addfav}>Add to favorite</button>
+              <button className="md:px-8 px-4 py-2 md:py-7  bg-red-600 hover:bg-red-700 rounded-lg text-white text-sm md:text-3xl md:mt-8" onClick={addfav}>Add to favorite</button>
             </div>
           </div>
 
