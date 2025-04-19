@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar';
 import bg from '../assets/bg.jpg';
-import logo from '../assets/Netflix-logo.png';
+import logo from '../assets/Netflix-Logo.png';
 import { useNavigate } from 'react-router-dom';
 
 const First = () => {
