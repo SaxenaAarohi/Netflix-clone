@@ -9,7 +9,12 @@ const First = () => {
   const navigate = useNavigate();
 
   function tomodal() {
-    navigate('/modal/signin')
+    const Auth=localStorage.getItem("check");
+    if(Auth=="true")
+      navigate("/home")
+  else{
+      navigate("/modal/signin")
+  }
   }
 
   return (

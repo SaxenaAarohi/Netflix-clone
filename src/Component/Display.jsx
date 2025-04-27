@@ -35,7 +35,30 @@ const Display = ({ newarray,type }) => {
               </div>
             ))
           ) : (
-            <p>No movies found.</p>
+            <>
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+             <div
+              className='bg-gray-300 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+            </>
+           
+            
+              
+           
           )}
           {isclick && (type=="movie"?<Details id={id} closemodal={closemodal}/> :  <Tvdetails id={id} closemodal={closemodal}/>) }
        

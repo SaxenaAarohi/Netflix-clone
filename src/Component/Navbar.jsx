@@ -32,8 +32,15 @@ className={`md:hidden text-4xl text-${color} mt-4`}
         <div className='flex text-white text-xl md:text-4xl mr-4  mt-5 gap-6 md:gap-10 md:mr-20'>
           <img onClick={()=>{
             navigate('/search')}} className='md:h-[60px] h-[30px] w-[30px] md:w-[60px]' src={`${search}`}></img>
-          {/* <p>Details</p>
-          <p>bell icon</p> */}
+         <button
+          className="bg-red-600 text-white font-bold px-4 h-16 text-sm md:text-[20px] rounded-md"
+          onClick={()=>{
+           localStorage.setItem("check",false )
+           navigate('/')
+          }}
+        >
+          Log Out
+        </button>
 
         </div>
       </div>

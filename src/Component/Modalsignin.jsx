@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import bg from '../assets/bg.jpg';
 import Footer from './Footer';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -7,6 +7,8 @@ const Modalsignin = () => {
     const {type}=useParams();
     const [inpval, setInput] = useState("");
     const navigate = useNavigate();
+
+ 
     const validateEmail = (email) => {
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return pattern.test(email);
@@ -16,17 +18,19 @@ const Modalsignin = () => {
 
     }
     function gotohome(){
+        
         const obj={[inpval]:true};
-        localStorage.setItem("id",JSON.stringify(obj) )
         if(!validateEmail(inpval))
             alert("Not valid Email")
-        else
-        navigate('/home')
+        else{
+            navigate('/home')
+            localStorage.setItem("check",true )
+        }
+      
     }
     return (
         <div className="">
             <div className="bg-black relative w-screen min-h-screen bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${bg})` }}>
-               
                 <div className='w-32 md:w-60 ml-10 md:ml-40'>
                     <img  src={`${logo}`} />
                 </div>

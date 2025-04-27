@@ -26,7 +26,7 @@ const Searchmovie = () => {
 useEffect(()=>{
   const time=setTimeout(() => {
     search();
-  }, 2500);
+  }, 3000);
 },[input])
   return (
     <div className='bg-black h-screen'>

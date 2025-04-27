@@ -28,8 +28,23 @@ const griddisplay = ({newarray}) => {
             ))
           ) : (
             <div className='flex w-full justify-center flex-center'>
-              <div className='text-3xl font-bold '>
-              No movies found.
+              <div className='text-3xl flex flex-wrap  font-bold '>
+              <div
+              className='bg-gray-300 m-10 h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+               <div
+              className='bg-gray-300 m-10  h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+               <div
+              className='bg-gray-300 m-10  h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+               <div
+              className='bg-gray-300 m-10  h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+               <div
+              className='bg-gray-300 m-10  h-[150px] animate-pulse md:h-[500px] w-[100px] md:w-[500px] shrink-0 hover:-translate-y-[40px] transition-transform duration-200'
+            />
+          
               </div>
           
               </div>
